@@ -13,23 +13,28 @@ public class MinPathSum {
         //int[][] dp = new int[gridSize][colSize];
         //dp[0][0] = grid[0][0];
         for (int i = 1; i < gridSize; i++) {
+            //邻边的路径最小只有一种结果
             grid[i][0] = grid[i][0] + grid[i - 1][0];
         }
         for (int i = 1; i < colSize; i++) {
+            //邻边的路径最小只有一种结果
             grid[0][i] = grid[0][i] + grid[0][i - 1];
         }
         int t = Math.max(gridSize, colSize);
         for (int i = 1; i < t; i++) {
             if (i < gridSize && i < colSize) {
+                //对称点的路径有两种情况，左边过来或右边过来，取最小
                 grid[i][i] = grid[i][i] + (Math.min(grid[i - 1][i], grid[i][i - 1]));
             }
             if (i < gridSize) {
                 for (int j = i + 1; j < colSize; j++) {
+                    //横坐标上点的路径有两种情况
                     grid[i][j] = grid[i][j] + (Math.min(grid[i - 1][j], grid[i][j - 1]));
                 }
             }
             if (i < colSize) {
                 for (int j = i + 1; j < gridSize; j++) {
+                    //纵坐标上点的路径有两种情况
                     grid[j][i] = grid[j][i] + (Math.min(grid[j - 1][i], grid[j][i - 1]));
                 }
             }

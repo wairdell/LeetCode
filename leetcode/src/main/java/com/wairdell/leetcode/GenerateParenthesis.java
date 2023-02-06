@@ -6,29 +6,34 @@ import java.util.List;
 /**
  * author : fengqiao
  * date   : 2023/2/1 16:07
- * desc   :
+ * desc   : 括号生成 https://leetcode.cn/problems/generate-parentheses/
  */
 public class GenerateParenthesis {
 
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
-        if (n < 1) {
+        if (n == 1) {
+            result.add("()");
             return result;
         }
-        result.add("()");
-        for (int i = 1; i < n; i++) {
-            ArrayList<String> list = new ArrayList<>(result);
-            result.clear();
-            for (String s : list) {
+        List<String> parenthesis = generateParenthesis(n - 1);
+        for (String s : parenthesis) {
+            if (!result.contains("(" + s + ")")) {
                 result.add("(" + s + ")");
+            }
+            if (!result.contains(s + "()")) {
                 result.add(s + "()");
+            }
+            if (!result.contains("()" + s)) {
+                result.add("()" + s);
             }
         }
         return result;
     }
 
+
     public static void main(String[] args) {
-        System.out.println(new GenerateParenthesis().generateParenthesis(3));
+        System.out.println(new GenerateParenthesis().generateParenthesis(4));
     }
 
 }

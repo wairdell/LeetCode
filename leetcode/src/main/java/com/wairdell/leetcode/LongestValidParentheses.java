@@ -9,6 +9,7 @@ public class LongestValidParentheses {
 
     public int longestValidParentheses(String s) {
         int maxLen = 0;
+        //记录 ')' 时这个位置成为一组最大有效数
         int[] dp = new int[s.length()];
         byte[] chars = s.getBytes();
         for (int i = 1; i < chars.length; i++) {
