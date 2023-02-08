@@ -5,13 +5,19 @@
   - MaximumSubarray
   - LongestValidParentheses
   - FirstMissingPositive
-  - RegularExpressionMatching
+  - RegularExpressionMatching | WildcardMatching
+  - InterleavingString
+  - DungeonGame(动态规划 无后效性)
+  - MajorityElement
+  - ValidAnagram
 - todo
   - TrappingRainWater
   - GenerateParenthesis
   - DecodeWays
   - MaximumFrequencyStack
   - MaximalRectangle
+  - EditDistance
 - extend
   - StringToIntegerAtoi | ValidNumber 确定有限状态自动机
+  - DifferentWaysToAddParentheses
   
