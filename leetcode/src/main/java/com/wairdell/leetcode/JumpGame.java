@@ -7,7 +7,7 @@ package com.wairdell.leetcode;
  */
 public class JumpGame {
 
-    public boolean canJump(int[] nums) {
+   /* public boolean canJump(int[] nums) {
         if (nums.length == 1) {
             return true;
         }
@@ -36,13 +36,25 @@ public class JumpGame {
             index = maxIndex;
         }
         return true;
+    }*/
+
+
+    public boolean canJump(int[] nums) {
+        //使用贪心算法
+        int distance = nums.length - 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (i + nums[i] >= distance) {
+                distance = i;
+            }
+        }
+        return distance == 0;
     }
 
     public static void main(String[] args) {
-        System.out.println("result " + new JumpGame().canJump(new int[]{3, 2, 1, 0, 4}));
-        System.out.println("result " + new JumpGame().canJump(new int[]{1, 2}));
-        System.out.println("result " + new JumpGame().canJump(new int[]{2, 0, 0}));
-        System.out.println("result " + new JumpGame().canJump(new int[]{5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0}));
+        System.out.println("result false " + new JumpGame().canJump(new int[]{3, 2, 1, 0, 4}));
+        System.out.println("result true " + new JumpGame().canJump(new int[]{1, 2}));
+        System.out.println("result true " + new JumpGame().canJump(new int[]{2, 0, 0}));
+        System.out.println("result true " + new JumpGame().canJump(new int[]{5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0}));
 
     }
 

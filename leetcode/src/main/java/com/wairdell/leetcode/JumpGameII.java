@@ -9,23 +9,24 @@ import java.util.Arrays;
  */
 public class JumpGameII {
 
-    /*public int jump(int[] nums) {
+    public int jump(int[] nums) {
+        //贪心算法
         int ans = 0;
-        int end = 0;
         int maxPos = 0;
-        for (int i = 0; i < nums.length - 1; i++)
-        {
-            maxPos = Math.max(nums[i] + i, maxPos);
-            if (i == end)
-            {
+        int end = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            //某一阶段在起点位置和结束位置中求个最大坐标
+            maxPos = Math.max(maxPos, nums[i] + i);
+            if (i == end) {
+                //如果到达了某个阶段的终点坐标，将下一阶段的终点坐标更新为这个阶段求出的最大坐标
                 end = maxPos;
                 ans++;
             }
         }
         return ans;
-    }*/
+    }
 
-    public int jump(int[] nums) {
+    /*public int jump(int[] nums) {
 //        System.out.println("\n" + Arrays.toString(nums) + " => ");
         int[] weights = new int[nums.length];
         int maxWeight = nums[0];
@@ -66,7 +67,7 @@ public class JumpGameII {
         }
 //        System.out.println("return");
         return result;
-    }
+    }*/
 
     public static void main(String[] args) {
 
