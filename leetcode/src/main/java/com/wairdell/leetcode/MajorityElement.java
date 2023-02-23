@@ -3,20 +3,20 @@ package com.wairdell.leetcode;
 /**
  * author : fengqiao
  * date   : 2023/2/8 13:34
- * desc   :
+ * desc   : 多数元素 https://leetcode.cn/problems/majority-element/
  */
 public class MajorityElement {
 
     public int majorityElement(int[] nums) {
         int count = 0;
-        Integer candidate = null;
-        for (int i = 0; i < nums.length; i++) {
+        Integer target = null;
+        for (int num : nums) {
             if (count == 0) {
-                candidate = nums[i];
+                target = num;
             }
-            count += (nums[i] == candidate ? 1 : -1);
+            count += (target == num ? 1 : -1);
         }
-        return candidate;
+        return target;
     }
 
     public static void main(String[] args) {
