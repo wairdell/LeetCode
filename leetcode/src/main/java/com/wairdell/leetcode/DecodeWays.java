@@ -44,9 +44,15 @@ public class DecodeWays {
     }
 
     public static void main(String[] args) {
-        System.out.println("result = " + new DecodeWays().numDecodings("12"));
-        System.out.println("result = " + new DecodeWays().numDecodings("226"));
-        System.out.println("result = " + new DecodeWays().numDecodings("1201234"));
+        System.out.println("result 2 = " + new DecodeWays().numDecodings("12"));
+        //dp[1] = 1 dp[2] = 2 dp[3]
+        System.out.println("result 3 = " + new DecodeWays().numDecodings("226"));
+        System.out.println("result 3 = " + new DecodeWays().numDecodings("1201234"));
+        System.out.println("result 0 = " + new DecodeWays().numDecodings("06"));
+        //2 7
+        System.out.println("result 1 = " + new DecodeWays().numDecodings("27"));
+        //2 10 1
+        System.out.println("result 1 = " + new DecodeWays().numDecodings("2101"));
     }
 
 }

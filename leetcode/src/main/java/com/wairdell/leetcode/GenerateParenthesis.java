@@ -1,6 +1,8 @@
 package com.wairdell.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -10,29 +12,54 @@ import java.util.List;
  */
 public class GenerateParenthesis {
 
+//    public List<String> generateParenthesis(int n) {
+//        List<String> result = new ArrayList<>();
+//        if (n == 1) {
+//            result.add("()");
+//            return result;
+//        }
+//        List<String> parenthesis = generateParenthesis(n - 1);
+//        for (String s : parenthesis) {
+//            if (!result.contains("(" + s + ")")) {
+//                result.add("(" + s + ")");
+//            }
+//            if (!result.contains(s + "()")) {
+//                result.add(s + "()");
+//            }
+//            if (!result.contains("()" + s)) {
+//                result.add("()" + s);
+//            }
+//        }
+//        return result;
+//    }
+
     public List<String> generateParenthesis(int n) {
-        List<String> result = new ArrayList<>();
-        if (n == 1) {
-            result.add("()");
-            return result;
+        return generateParenthesis(n, 0, 0, "");
+    }
+
+    public List<String> generateParenthesis(int n, int close, int open, String prefix) {
+        if (prefix.length() == n * 2) {
+            return Collections.singletonList(prefix);
         }
-        List<String> parenthesis = generateParenthesis(n - 1);
-        for (String s : parenthesis) {
-            if (!result.contains("(" + s + ")")) {
-                result.add("(" + s + ")");
-            }
-            if (!result.contains(s + "()")) {
-                result.add(s + "()");
-            }
-            if (!result.contains("()" + s)) {
-                result.add("()" + s);
-            }
+        ArrayList<String> list = new ArrayList<>();
+        if (open < n) {
+            list.addAll(generateParenthesis(n, close, open + 1, prefix + "("));
         }
-        return result;
+        if (close < open) {
+            list.addAll(generateParenthesis(n, close + 1, open, prefix + ")"));
+        }
+
+        return list;
     }
 
 
     public static void main(String[] args) {
+        //()
+        System.out.println(new GenerateParenthesis().generateParenthesis(1));
+        //(()), ()()
+        System.out.println(new GenerateParenthesis().generateParenthesis(2));
+        //((())), (())(), ()(()), (()()), ()()()
+        System.out.println(new GenerateParenthesis().generateParenthesis(3));
         System.out.println(new GenerateParenthesis().generateParenthesis(4));
     }
 

@@ -10,13 +10,14 @@
   - DungeonGame(动态规划 无后效性)
   - MajorityElement
   - ValidAnagram
+  - GenerateParenthesis
 - todo
   - TrappingRainWater
-  - GenerateParenthesis
   - DecodeWays
   - MaximumFrequencyStack
   - MaximalRectangle
   - EditDistance
+  - BestTimeToBuyAndSellStockIV
 - extend
   - StringToIntegerAtoi | ValidNumber 确定有限状态自动机
   - DifferentWaysToAddParentheses
