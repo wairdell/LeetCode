@@ -1,4 +1,4 @@
-package com.wairdell.leetcode;
+package com.wairdell.leetcode.exapmle;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ public class QuickSorter {
             return;
         }
         //用data[start] 作为基数，本次方法后基数放到应该在的索引(即索引前的数都小于这个数、索引后的数都大于这个数)
-        int l = start, r = end, t = data[start];
+        int l = start, r = end, t = data[l];
         //因为 start 位置已记录，那么第一个无效位置就可以是 start 和 l(l = start)
         while (l < r) {
             //寻找后面小于基数的数的索引
