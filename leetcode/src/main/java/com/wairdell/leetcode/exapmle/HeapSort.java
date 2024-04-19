@@ -11,16 +11,17 @@ public class HeapSort {
     void siftDown(int[] nums, int n, int i) {
         while (true) {
             int l = i * 2 + 1, r = i * 2 + 2, mark = i;
-            if (l < n && nums[mark] > nums[l]) {
+            if (l < n && nums[l] > nums[mark]) {
                 mark = l;
             }
-            if (r < n && nums[mark] > nums[r]) {
+            if (r < n && nums[r] > nums[mark]) {
                 mark = r;
             }
             if (mark == i) return;
-            swap(nums, mark, i);
+            swap(nums, i, mark);
             i = mark;
         }
+
     }
 
     void swap(int[] nums, int i, int j) {
@@ -30,13 +31,12 @@ public class HeapSort {
     }
 
     void heapSort(int[] nums) {
-        for (int i = (nums.length - 1) / 2; i >= 0; i--) {
+        for (int i = (nums.length - 2) / 2; i >= 0; i--) {
             siftDown(nums, nums.length, i);
         }
-        for (int i = 0; i < nums.length - 1; i++) {
-            int sortLength = nums.length - i - 1;
-            swap(nums, 0, sortLength);
-            siftDown(nums, sortLength, 0);
+        for (int i = 1; i < nums.length; i++) {
+            swap(nums, 0, nums.length - i);
+            siftDown(nums, nums.length - i, 0);
         }
     }
 

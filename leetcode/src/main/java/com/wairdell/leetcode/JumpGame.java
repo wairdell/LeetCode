@@ -38,23 +38,42 @@ public class JumpGame {
         return true;
     }*/
 
-
-    public boolean canJump(int[] nums) {
-        //使用贪心算法
-        int distance = nums.length - 1;
-        for (int i = nums.length - 2; i >= 0; i--) {
-            if (i + nums[i] >= distance) {
-                distance = i;
+    static class Impl {
+        public boolean canJump(int[] nums) {
+            //使用贪心算法
+            int distance = nums.length - 1;
+            for (int i = nums.length - 2; i >= 0; i--) {
+                if (i + nums[i] >= distance) {
+                    distance = i;
+                }
             }
+            return distance == 0;
         }
-        return distance == 0;
     }
 
+    static class ImplNew {
+
+        public boolean canJump(int[] nums) {
+            if (nums.length == 1) return true;
+            int max = nums[0];
+            for (int i = 1; i <= max; i++) {
+                if (max >= nums.length - 1) {
+                    return true;
+                }
+                max = Math.max(i + nums[i], max);
+            }
+            return false;
+        }
+
+    }
+
+
     public static void main(String[] args) {
-        System.out.println("result false " + new JumpGame().canJump(new int[]{3, 2, 1, 0, 4}));
-        System.out.println("result true " + new JumpGame().canJump(new int[]{1, 2}));
-        System.out.println("result true " + new JumpGame().canJump(new int[]{2, 0, 0}));
-        System.out.println("result true " + new JumpGame().canJump(new int[]{5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0}));
+        JumpGame.ImplNew jumpGame = new JumpGame.ImplNew();
+        System.out.println("result false " + jumpGame.canJump(new int[]{3, 2, 1, 0, 4}));
+        System.out.println("result true " + jumpGame.canJump(new int[]{1, 2}));
+        System.out.println("result true " + jumpGame.canJump(new int[]{2, 0, 0}));
+        System.out.println("result true " + jumpGame.canJump(new int[]{5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0}));
 
     }
 

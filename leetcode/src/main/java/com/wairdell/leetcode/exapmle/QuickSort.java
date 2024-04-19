@@ -27,19 +27,35 @@ public class QuickSort {
 
     void quickSort(int[] nums, int start, int end) {
         if (start >= end) return;
-        int l = start, r = end;
+        int less = start, i = start, greater = end;
+        int pivot = nums[start];
+        while (i <= greater) {
+            if (nums[i] < pivot) {
+                swap(nums, i++, less++);
+            } else if (nums[i] > pivot) {
+                swap(nums, i, greater--);
+            } else {
+                i++;
+            }
+        }
+        /*int l = start, r = end, t = nums[start];
         while (l < r) {
-            while (l < r && nums[r] >= nums[start]) {
+            while (l < r && nums[r] > t) {
                 r--;
             }
-            while (l < r && nums[l] <= nums[start]) {
+            if (l < r) {
+                nums[l++] = nums[r];
+            }
+            while (l < r && nums[l] < t) {
                 l++;
             }
-            swap(nums, l, r);
+            if (l < r) {
+                nums[r--] = nums[l];
+            }
         }
-        swap(nums, start, l);
-        quickSort(nums, start, l - 1);
-        quickSort(nums, l + 1, end);
+        nums[l] = t;*/
+        quickSort(nums, start, less - 1);
+        quickSort(nums, greater + 1, end);
     }
 
 }

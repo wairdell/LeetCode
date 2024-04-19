@@ -23,42 +23,31 @@ public class MergeSort {
 
     /* 合并左子数组和右子数组 */
     void merge(int[] nums, int left, int mid, int right) {
-        // 左子数组区间为 [left, mid], 右子数组区间为 [mid+1, right]
-        // 创建一个临时数组 tmp ，用于存放合并后的结果
+        int l = left, r = mid + 1, k = 0;
         int[] temp = new int[right - left + 1];
-        // 初始化左子数组和右子数组的起始索引
-        int i = left, j = mid + 1, k = 0;
-        // 当左右子数组都还有元素时，进行比较并将较小的元素复制到临时数组中
-        while (i <= mid && j <= right) {
-            if (nums[i] < nums[j]) {
-                temp[k++] = nums[i++];
+        while (l <= mid && r <= right) {
+            if (nums[l] < nums[r]) {
+                temp[k++] = nums[l++];
             } else {
-                temp[k++] = nums[j++];
+                temp[k++] = nums[r++];
             }
         }
-        // 将左子数组和右子数组的剩余元素复制到临时数组中
-        while (i <= mid) {
-            temp[k++] = nums[i++];
+        while (l <= mid) {
+            temp[k++] = nums[l++];
         }
-        while (j <= right) {
-            temp[k++] = nums[j++];
+        while (r <= right) {
+            temp[k++] = nums[r++];
         }
-
-        // 将临时数组 tmp 中的元素复制回原数组 nums 的对应区间
-        for (int z = 0; z < temp.length; z++) {
-            nums[left + z] = temp[z];
+        for (int i = 0; i < temp.length; i++) {
+            nums[left + i] = temp[i];
         }
     }
 
     void mergeSort(int[] nums, int left, int right) {
         if (left >= right) return;
-        int mid = (left + right) / 2;// 计算中点
-
-        // 划分阶段
-        mergeSort(nums, left, mid);// 递归左子数组
-        mergeSort(nums, mid + 1, right);// 递归右子数组
-
-        // 合并阶段
+        int mid = (right + left) / 2;
+        mergeSort(nums, left, mid);
+        mergeSort(nums, mid + 1, right);
         merge(nums, left, mid, right);
     }
 
