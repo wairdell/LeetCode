@@ -1,4 +1,4 @@
-package com.wairdell.leetcode;
+package com.wairdell.leetcode.problems.algorithm.greedy;
 
 /**
  * author : fengqiao

@@ -3,7 +3,7 @@ package com.wairdell.leetcode.problems.easy;
 /**
  * author : fengqiao
  * date   : 2023/3/7 16:58
- * desc   :
+ * desc   : 种花问题 https://leetcode.cn/problems/can-place-flowers/description/
  */
 public class CanPlaceFlowers {
 

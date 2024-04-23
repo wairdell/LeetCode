@@ -1,4 +1,4 @@
-package com.wairdell.leetcode;
+package com.wairdell.leetcode.problems.novelty;
 
 import java.util.Arrays;
 

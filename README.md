@@ -14,7 +14,6 @@
 - todo
   - TrappingRainWater
   - DecodeWays
-  - MaximumFrequencyStack
   - MaximalRectangle
   - EditDistance
   - BestTimeToBuyAndSellStockIV

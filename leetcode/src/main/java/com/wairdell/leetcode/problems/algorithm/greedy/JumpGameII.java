@@ -1,6 +1,4 @@
-package com.wairdell.leetcode;
-
-import java.util.Arrays;
+package com.wairdell.leetcode.problems.algorithm.greedy;
 
 /**
  * author : fengqiao

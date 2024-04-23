@@ -32,6 +32,15 @@ public class NQueens {
         return result;
     }
 
+    /**
+     *
+     * @param i 当前是第几行
+     * @param n
+     * @param cols 前几行都是在哪一列
+     * @param skim 前几行都是在哪一撇
+     * @param na 前几行都是在哪一娜
+     * @param searchResult
+     */
     private void search(int i, int n, int[] cols, int[] skim, int[] na, List<int[]> searchResult) {
         if (i == n) {
             searchResult.add(Arrays.copyOf(cols, cols.length));

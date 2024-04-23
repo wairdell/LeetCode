@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * date   : 2024/4/12 11:52
- * desc   : https://www.hello-algo.com/chapter_heap/heap/
+ * desc   : 堆 https://www.hello-algo.com/chapter_heap/heap/
  */
 public class SampleHeap {
 

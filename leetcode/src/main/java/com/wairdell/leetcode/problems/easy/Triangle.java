@@ -1,4 +1,4 @@
-package com.wairdell.leetcode;
+package com.wairdell.leetcode.problems.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,26 @@ import java.util.List;
 public class Triangle {
 
     public int minimumTotal(List<List<Integer>> triangle) {
-        if (triangle.size() == 1) {
+        if (triangle.size() == 1) return triangle.get(0).get(0);
+        int min = Integer.MAX_VALUE;
+        for (int i = 1; i < triangle.size(); i++) {
+            List<Integer> current = triangle.get(i);
+            for (int j = 0; j < current.size(); j++) {
+                Integer t = current.get(j);
+                List<Integer> previous = triangle.get(i - 1);
+                if (j == 0) {
+                    current.set(j, previous.get(0) + t);
+                } else if (j == current.size() - 1) {
+                    current.set(j, previous.get(j - 1) + t);
+                } else {
+                    current.set(j, t + Math.min(previous.get(j - 1), previous.get(j)));
+                }
+                if (i == triangle.size() - 1) {
+                    min = Math.min(min, current.get(j));
+                }
+            }
+        }
+        /*if (triangle.size() == 1) {
             return triangle.get(0).get(0);
         }
         int[] widgetCache = new int[triangle.size()];
@@ -36,7 +55,7 @@ public class Triangle {
                     min = Math.min(min, widgetCache[j]);
                 }
             }
-        }
+        }*/
         return min;
     }
 

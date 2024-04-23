@@ -1,10 +1,10 @@
-package com.wairdell.leetcode;
+package com.wairdell.leetcode.problems.algorithm.dijkstra;
 
 import java.util.Arrays;
 
 /**
  * date   : 2024/4/18 13:42
- * desc   :
+ * desc   : 设计可以求最短路径的图类 https://leetcode.cn/problems/design-graph-with-shortest-path-calculator
  */
 public class DesignGraphWithShortestPathCalculator {
 
@@ -79,7 +79,7 @@ public class DesignGraphWithShortestPathCalculator {
 
     static class Graph {
 
-        private static final int INF = -1;
+        private static final int INF = Integer.MAX_VALUE / 2;
         private int[][] graph;
 
         private int n;
@@ -102,39 +102,30 @@ public class DesignGraphWithShortestPathCalculator {
 
         public int shortestPath(int node1, int node2) {
             int[] dist = new int[n];
-            Arrays.fill(dist, INF);
             for (int i = 0; i < dist.length; i++) {
                 dist[i] = graph[node1][i];
             }
             dist[node1] = 0;
             boolean[] visited = new boolean[n];
-            int k = node1;
-            visited[k] = true;
-            int ans = Integer.MAX_VALUE;
-            for (int i = 0; i < n - 1; i++) {
-                int min = INF;
-                int t = -1;
+            visited[node1] = true;
+            while (true) {
+                int min = Integer.MAX_VALUE;
+                int k = -1;
                 for (int j = 0; j < n; j++) {
-                    if (graph[k][j] == INF || visited[j]) continue;
-                    if (j == node2) {
-                        ans = Math.min(dist[k] + graph[k][j], ans);
-                    } else {
-                        if (min == INF || dist[j] < min) {
-                            min = dist[j];
-                            t = j;
-                        }
+                    if (!visited[j] && dist[j] != INF && dist[j] < min) {
+                        min = dist[j];
+                        k = j;
                     }
                 }
-                if (t == -1 || min > ans) break;
-                visited[t] = true;
+                if (k == -1) break;
+                visited[k] = true;
                 for (int j = 0; j < n; j++) {
-                    if (!visited[j] && (dist[j] == INF || dist[j] > dist[t] + graph[t][j])) {
-                        dist[j] = dist[t] + graph[t][j];
+                    if (!visited[j] && graph[k][j] != INF) {
+                        dist[j] = Math.min(dist[j], dist[k] + graph[k][j]);
                     }
                 }
-                k = t;
             }
-            return ans == Integer.MAX_VALUE ? -1 : ans;
+            return dist[node2] == INF ? -1 : dist[node2];
         }
 
 

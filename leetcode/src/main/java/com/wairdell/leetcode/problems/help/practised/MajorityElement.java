@@ -1,4 +1,4 @@
-package com.wairdell.leetcode.problems.help;
+package com.wairdell.leetcode.problems.help.practised;
 
 /**
  * author : fengqiao
@@ -9,6 +9,7 @@ public class MajorityElement {
 
     public int majorityElement(int[] nums) {
         int count = 0;
+        //因为多数元素出现次数大于 n/2，所以不管哪时候出现，target 总能标记为多数元素
         Integer target = null;
         for (int num : nums) {
             if (count == 0) {

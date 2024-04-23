@@ -3,7 +3,7 @@ package com.wairdell.leetcode.problems.easy;
 /**
  * author : fengqiao
  * date   : 2023/3/7 16:19
- * desc   : https://leetcode.cn/problems/longest-palindrome/ 最长回文串
+ * desc   : 最长回文串 https://leetcode.cn/problems/longest-palindrome/
  */
 public class LongestPalindrome {
 

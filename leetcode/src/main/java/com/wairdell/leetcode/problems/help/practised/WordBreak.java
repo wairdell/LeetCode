@@ -1,4 +1,4 @@
-package com.wairdell.leetcode.problems.help;
+package com.wairdell.leetcode.problems.help.practised;
 
 import java.util.Arrays;
 import java.util.List;
