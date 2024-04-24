@@ -1,6 +1,7 @@
 package com.wairdell.leetcode.problems.algorithm.dfs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -36,6 +37,28 @@ public class CombinationSum {
     public static void main(String[] args) {
 //        System.out.println("result = " + new CombinationSum().combinationSum(new int[]{2, 3, 6, 7}, 7));
         System.out.println("result = " + new CombinationSum().combinationSum(new int[]{4, 2, 8}, 8));
+    }
+
+    class Impl {
+        public List<List<Integer>> combinationSum(int[] candidates, int target) {
+            return dfs(candidates, target, 0, new ArrayList<Integer>(), 0);
+        }
+
+        private List<List<Integer>> dfs(int[] candidates, int target, int i, List<Integer> nums, int sum) {
+            if (sum == target) {
+                List<Integer> list = new ArrayList<>(nums);
+                return Collections.singletonList(list);
+            }
+            if (i >= candidates.length) return Collections.emptyList();
+            if (sum > target + candidates[i]) return Collections.emptyList();
+            List<List<Integer>> ans = new ArrayList<>();
+            while (sum <= target) {
+                ans.addAll(dfs(candidates, target, i + 1, new ArrayList<>(nums), sum));
+                sum += candidates[i];
+                nums.add(candidates[i]);
+            }
+            return ans;
+        }
     }
 
 }

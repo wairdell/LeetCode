@@ -31,6 +31,7 @@ public class WordLadder {
             return true;
         }
 
+        //双向bfs
         public int ladderLength(String beginWord, String endWord, List<String> wordList) {
             HashSet<String> wordSet = new HashSet<>(wordList);
             if (!wordSet.contains(endWord)) return 0;

@@ -26,6 +26,7 @@ public class MinimumGeneticMutation {
         return true;
     }
 
+    //双向bfs
     public int minMutation(String startGene, String endGene, String[] bank) {
         HashSet<String> bankSet = new HashSet<>(Arrays.asList(bank));
         if (!bankSet.contains(endGene)) return -1;

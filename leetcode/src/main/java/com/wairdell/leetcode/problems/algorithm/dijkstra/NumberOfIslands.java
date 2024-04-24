@@ -1,4 +1,4 @@
-package com.wairdell.leetcode.problems.structure.disjoint;
+package com.wairdell.leetcode.problems.algorithm.dijkstra;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
