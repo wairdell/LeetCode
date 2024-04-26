@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * date   : 2024/4/22 17:37
- * desc   :
+ * desc   : 无重复字符串的排列组合 https://leetcode.cn/problems/Permutation-I-Lcci
  */
 public class PermutationILcci {
 

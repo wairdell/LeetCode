@@ -21,3 +21,11 @@
   - StringToIntegerAtoi | ValidNumber 确定有限状态自动机
   - DifferentWaysToAddParentheses
   
+- 数据结构
+  - [x] 线段树 
+  - [x] 堆
+  - [x] 字典树
+  - [x] 并查集
+  - [x] 单调队列
+  - [x] 单调栈
+  - [ ] 树状数组
