@@ -35,4 +35,32 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return max;
     }
 
+    class Impl {
+
+        public int lengthOfLongestSubstring(String s) {
+            int max = 0;
+            char[] chars = s.toCharArray();
+            int start = -1;
+            for(int i = 0; i < s.length(); i++) {
+                start = searchChar(chars, chars[i], start, i);
+                if(max < i - start + 1) {
+                    max = i - start;
+                }
+            }
+            return max;
+        }
+
+
+        //查找是否有重复，如果有重复则将重复位置返回，后续以重复位置为开始位置，来确定结果
+        public int searchChar(char[] chars, char ch, int start, int length) {
+            for(int i = start + 1; i < length; i++) {
+                if(chars[i] == ch) {
+                    return i;
+                }
+            }
+            return start;
+        }
+
+    }
+
 }

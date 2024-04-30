@@ -1,4 +1,4 @@
-package com.wairdell.leetcode.problems;
+package com.wairdell.leetcode.problems.easy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

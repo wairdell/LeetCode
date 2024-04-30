@@ -1,4 +1,4 @@
-package com.wairdell.leetcode.problems;
+package com.wairdell.leetcode.problems.algorithm.dfs;
 
 /**
  * author : fengqiao

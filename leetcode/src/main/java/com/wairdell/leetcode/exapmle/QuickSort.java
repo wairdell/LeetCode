@@ -38,22 +38,17 @@ public class QuickSort {
                 i++;
             }
         }
-        /*int l = start, r = end, t = nums[start];
+        /*int l = start, r = end;
         while (l < r) {
-            while (l < r && nums[r] > t) {
+            while (l < r && nums[r] >= nums[start]) {
                 r--;
             }
-            if (l < r) {
-                nums[l++] = nums[r];
-            }
-            while (l < r && nums[l] < t) {
+            while (l < r && nums[l] <= nums[start]) {
                 l++;
             }
-            if (l < r) {
-                nums[r--] = nums[l];
-            }
+            swap(nums, l, r);
         }
-        nums[l] = t;*/
+        swap(nums, start, l);*/
         quickSort(nums, start, less - 1);
         quickSort(nums, greater + 1, end);
     }

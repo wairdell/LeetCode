@@ -1,9 +1,9 @@
-package com.wairdell.leetcode;
+package com.wairdell.leetcode.problems;
 
 /**
  * author : fengqiao
  * date   : 2023/2/13 16:25
- * desc   : 买卖股票的最佳时机 IV https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/
+ * desc   : 买卖股票的最佳时机 III https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/
  */
 public class BestTimeToBuyAndSellStockIII {
 
@@ -23,18 +23,13 @@ public class BestTimeToBuyAndSellStockIII {
         int max = dp[0][0] - prices[1];
         for (int i = 2; i < prices.length; i++) {
             dp[i][0] = Math.max(dp[i - 1][0], prices[i] - min);
+
             dp[i][1] = Math.max(dp[i - 1][1], prices[i] + max);
-            /*dp[i][0] = dp[i - 1][0];
-            for (int j = 0; j < i; j++) {
-                dp[i][0] = Math.max(dp[i][0], prices[i] - prices[j]);
-            }
-            dp[i][1] = dp[i - 1][1];
-            for (int j = 1; j < i; j++) {
-                //prices[i] + dp[j - 1][0] - prices[j];
-                dp[i][1] = Math.max(dp[i][1], dp[j - 1][0] + (prices[i] - prices[j]));
-            }*/
+
             dp[i][1] = Math.max(dp[i][0], dp[i][1]);
+
             min = Math.min(prices[i], min);
+
             max = Math.max(dp[i - 1][0] - prices[i], max);
         }
         return dp[prices.length - 1][1];

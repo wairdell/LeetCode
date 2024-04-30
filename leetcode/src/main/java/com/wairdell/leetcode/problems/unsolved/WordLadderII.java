@@ -9,7 +9,7 @@ import java.util.Set;
 
 /**
  * date   : 2024/4/23 15:25
- * desc   :
+ * desc   : 单词接龙 II https://leetcode.cn/problems/Word-Ladder-II
  */
 public class WordLadderII {
 
