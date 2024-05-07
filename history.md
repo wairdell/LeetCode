@@ -1,3 +1,23 @@
+- 2024/5/7
+  - [x] [判断路径是否相交](https://leetcode.cn/problems/path-crossing)
+  - [x] [收藏清单](https://leetcode.cn/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list)
+    `需要熟悉各种数据结构添加，删除，插件的效率`
+  - [x] [省份数量](https://leetcode.cn/problems/number-of-provinces)
+  - [x] [二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree)
+  - [x] [最大连续 1 的个数](https://leetcode.cn/problems/max-consecutive-ones)
+  - [x] [01 矩阵](https://leetcode.cn/problems/01-matrix)
+  - [x] [N 叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-n-ary-tree)
+  - [x] [相对名次](https://leetcode.cn/problems/relative-ranks)
+  - [x] [乘积小于 K 的子数组](https://leetcode.cn/problems/subarray-product-less-than-k)
+  - [ ] [最长连续递增序列](https://leetcode.cn/problems/longest-increasing-subsequence)
+  - [ ] [买卖股票的最佳时机含手续费](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)
+  - [x] [可被 K 整除的最小整数](https://leetcode.cn/problems/smallest-integer-divisible-by-k)
+    `(10 * 1 + 1) % k, (100 * 1 + 10 * 1 + 1) % k， 可以转化为 res = (res % k) * 10 + 1`
+  - [x] [在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row)
+  - [x] [环形数组是否存在循环](https://leetcode.cn/problems/circular-array-loop)
+  - [x] [两数相加 II](https://leetcode.cn/problems/add-two-numbers-ii)
+  - [x] [反转链表](https://leetcode.cn/problems/reverse-linked-list)
+
 - 2024/5/6
   - [x] [拆炸弹](https://leetcode.cn/problems/defuse-the-bomb)
   - [x] [输入单词需要的最少按键次数 II](https://leetcode.cn/problems/minimum-number-of-pushes-to-type-word-ii)
