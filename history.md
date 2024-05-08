@@ -1,3 +1,19 @@
+- 2024/5/8
+  - [x] [给植物浇水](https://leetcode.cn/problems/watering-plants)
+  - [x] [反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii)
+  - [x] [二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal)
+  - [x] [重排链表](https://leetcode.cn/problems/reorder-list)
+  - [x] [Excel表列名称](https://leetcode.cn/problems/excel-sheet-column-title)
+  - [x] [计数质数](https://leetcode.cn/problems/count-primes)
+    `埃氏筛`
+  - [x] [二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths)
+  - [x] [完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes)
+  - [x] [平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree)
+  - [x] [杨辉三角 II](https://leetcode.cn/problems/pascals-triangle-ii)
+  - [x] [对称二叉树](https://leetcode.cn/problems/symmetric-tree)
+  - [x] [N 皇后 II](https://leetcode.cn/problems/n-queens-ii)
+  - [x] [验证回文串](https://leetcode.cn/problems/valid-palindrome)
+
 - 2024/5/7
   - [x] [判断路径是否相交](https://leetcode.cn/problems/path-crossing)
   - [x] [收藏清单](https://leetcode.cn/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list)
