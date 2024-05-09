@@ -1,3 +1,20 @@
+- 2024/5/9
+  - [x] [给植物浇水 II](https://leetcode.cn/problems/watering-plants-ii)
+  - [x] [检查两个字符串是否几乎相等](https://leetcode.cn/problems/check-whether-two-strings-are-almost-equivalent)
+  - [x] [统计好数字的数目](https://leetcode.cn/problems/count-good-numbers)
+  - [x] [消灭怪物的最大数量](https://leetcode.cn/problems/count-good-numbers)
+    `先计算出每个怪物到达需要的时间，根据时间进行排序，然后循环判断，如果到达的时间大于等于当前循环的次数，则说怪物已到达，返回结果`
+  - [ ] [使二进制字符串字符交替的最少反转次数](https://leetcode.cn/problems/minimum-number-of-flips-to-make-the-binary-string-alternating)
+  - [x] [至少在两个数组中出现的值](https://leetcode.cn/problems/two-out-of-three)
+  - [x] [统计出现过一次的公共字符串](https://leetcode.cn/problems/count-common-words-with-one-occurrence)
+  - [x] [检查句子中的数字是否递增](https://leetcode.cn/problems/check-if-numbers-are-ascending-in-a-sentence)
+  - [x] [组合总和 II](https://leetcode.cn/problems/combination-sum-ii)
+  - [x] [单词拆分 II](https://leetcode.cn/problems/word-break-ii)
+  - [x] [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
+  - [x] [字符串解码](https://leetcode.cn/problems/decode-string)
+  - [ ] [区间和的个数](https://leetcode.cn/problems/count-of-range-sum)
+  - [x] [字符串中的第一个唯一字符](https://leetcode.cn/problems/first-unique-character-in-a-string)
+
 - 2024/5/8
   - [x] [给植物浇水](https://leetcode.cn/problems/watering-plants)
   - [x] [反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii)

@@ -18,6 +18,7 @@ public class WordBreak {
                 //判断子串是否包含(0~n的子串是否包含可以拆解成 0~m~n, 再判断是否包含 n~m 和 m~n)
                 if (mapping[j] && wordDict.contains(s.substring(j, i))) {
                     mapping[i] = true;
+                    break;
                 }
             }
         }
