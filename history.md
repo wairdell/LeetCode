@@ -1,3 +1,16 @@
+- 2024/5/11
+  - [x] [收集垃圾的最少总时间](https://leetcode.cn/problems/minimum-amount-of-time-to-collect-garbage)
+  - [x] [笨阶乘](https://leetcode.cn/problems/clumsy-factorial)
+  - [x] [字符串相乘](https://leetcode.cn/problems/multiply-strings)
+  - [x] [各位相加](https://leetcode.cn/problems/add-digits)
+  - [x] [找出所有子集的异或总和再求和](https://leetcode.cn/problems/sum-of-all-subset-xor-totals)
+  - [x] [半径为 k 的子数组平均值](https://leetcode.cn/problems/k-radius-subarray-averages)
+
+- 2024/5/10
+  - [x] [统计已测试设备](https://leetcode.cn/problems/count-tested-devices-after-test-operations)
+  - [x] [单词替换](https://leetcode.cn/problems/replace-words)
+  - [ ] [最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence)
+
 - 2024/5/9
   - [x] [给植物浇水 II](https://leetcode.cn/problems/watering-plants-ii)
   - [x] [检查两个字符串是否几乎相等](https://leetcode.cn/problems/check-whether-two-strings-are-almost-equivalent)
