@@ -1,3 +1,11 @@
+- 2024/5/14
+  - [x] [完成所有任务需要的最少轮数](https://leetcode.cn/problems/minimum-rounds-to-complete-all-tasks) 
+
+- 2024/5/13
+  - [x] [腐烂的橘子](https://leetcode.cn/problems/rotting-oranges)
+  - [x] [查找共用字符](https://leetcode.cn/problems/find-common-characters)
+  - [x] [元音拼写检查器](https://leetcode.cn/problems/vowel-spellchecker)
+
 - 2024/5/11
   - [x] [收集垃圾的最少总时间](https://leetcode.cn/problems/minimum-amount-of-time-to-collect-garbage)
   - [x] [笨阶乘](https://leetcode.cn/problems/clumsy-factorial)
